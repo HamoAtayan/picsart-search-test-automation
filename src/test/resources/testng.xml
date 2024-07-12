@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Resolution Test Suite" parallel="tests" thread-count="3">
+    <test name="Resolution 1024x768">
+        <parameter name="width" value="1024"/>
+        <parameter name="height" value="768"/>
+        <classes>
+            <class name="com.picsart.tests.ui_tests.SearchTest"/>
+        </classes>
+    </test>
+    <test name="Resolution 1440x900">
+        <parameter name="width" value="1440"/>
+        <parameter name="height" value="900"/>
+        <classes>
+            <class name="com.picsart.tests.ui_tests.SearchTest"/>
+        </classes>
+    </test>
+    <test name="Resolution 1366x768">
+        <parameter name="width" value="1366"/>
+        <parameter name="height" value="768"/>
+        <classes>
+            <class name="com.picsart.tests.ui_tests.SearchTest"/>
+        </classes>
+    </test>
+
+    <test name="Api Tests">
+        <packages>
+            <package name="com.picsart.tests.api_tests.*"/>
+        </packages>
+    </test>
+
+</suite>
+
+
+
