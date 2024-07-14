@@ -96,7 +96,7 @@ public class SearchPage extends BasePage<SearchPage> {
     }
 
     public boolean isLikeButtonDisplayed() {
-        WaitHelper.waitForVisibility(getDriver(), allSearchItems.get(0));
+        WaitHelper.waitForVisibility(getDriver(), allSearchItems, Duration.ofSeconds(10));
         for (WebElement element : allSearchItems
         ) {
             hoverOnElement(element);
@@ -110,7 +110,7 @@ public class SearchPage extends BasePage<SearchPage> {
 
 
     public boolean isTryNowDisplayed() {
-        WaitHelper.waitForVisibility(getDriver(), allSearchItems.get(0));
+        WaitHelper.waitForVisibility(getDriver(), allSearchItems, Duration.ofSeconds(10));
         for (WebElement element : allSearchItems
         ) {
             hoverOnElement(element);

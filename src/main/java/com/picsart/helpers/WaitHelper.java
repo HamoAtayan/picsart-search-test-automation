@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 @Slf4j
 public class WaitHelper {
@@ -15,6 +16,11 @@ public class WaitHelper {
 
     public static void waitForVisibility(WebDriver driver, WebElement element) {
         waitForVisibility(driver, element, TIMEOUT);
+    }
+
+    public static void waitForVisibility(WebDriver driver, List<WebElement> elements, Duration timeout) {
+        WebDriverWait wait = new WebDriverWait(driver, timeout);
+        elements.forEach(element -> wait.until(ExpectedConditions.visibilityOf(element)));
     }
 
     public static void waitForVisibility(WebDriver driver, WebElement element, Duration timeout) {
